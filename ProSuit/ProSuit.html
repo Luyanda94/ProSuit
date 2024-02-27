@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: white;
+      }
+
+      .navbar {
+        background-color: #ffff;
+        overflow: hidden;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .nav-links {
+        display: flex;
+        margin-right: 20px; /* Adjusted margin to move links to the right */
+      }
+
+      .nav-links a {
+        color: black;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: green;
+      }
+
+      .action-buttons {
+        margin-left: 40px; /* Adjusted margin to move button to the left */
+      }
+
+      .action-buttons button {
+        background-color: #008000;
+        color: #333;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background-color: black;
+        margin: 5px 0;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 75px;
+          right: 30px;
+          width: 100%;
+          background-color: #333;
+          text-align: center;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .nav-links a {
+          margin: 10px 0;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+
+        .menu-toggle.show span:nth-child(1),
+        .menu-toggle.show span:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        .menu-toggle.show span:nth-child(2) {
+          opacity: 0;
+        }
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        navLinks.classList.toggle("show");
+        menuToggle.classList.toggle("show");
+      }
+
+      function requestDemo() {
+        alert("Demo requested!");
+      }
+    </script>
+    <title>ProSuit</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images\logo.png" alt="Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="action-buttons">
+        <button class="request-demo" onclick="requestDemo()">
+          Request Demo
+        </button>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </body>
+</html>
