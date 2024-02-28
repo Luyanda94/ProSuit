@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="..."
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the power of Software with ProSuit"
+    />
+
     <style>
       body {
         margin: 0;
@@ -26,7 +38,8 @@
 
       .nav-links {
         display: flex;
-        margin-right: 20px; /* Adjusted margin to move links to the right */
+        margin-right: 20px;
+        font-weight: bold;
       }
 
       .nav-links a {
@@ -41,15 +54,20 @@
       }
 
       .action-buttons {
-        margin-left: 40px; /* Adjusted margin to move button to the left */
+        margin-left: 40px;
+        padding: 10px 20px;
       }
 
       .action-buttons button {
         background-color: #008000;
-        color: #333;
-        padding: 10px 15px;
+        color: white;
+        padding: 10px 20px;
         border: none;
         cursor: pointer;
+      }
+
+      .action-buttons button:hover {
+        background-color: #006400;
       }
 
       .menu-toggle {
@@ -98,7 +116,692 @@
           opacity: 0;
         }
       }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .text-section {
+        flex: 1;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+
+      .text-section h1 {
+        font-size: 2em;
+        color: green;
+      }
+
+      .text-section p {
+        font-size: 1.2em;
+        color: #666;
+      }
+
+      .image-section {
+        flex: 1;
+        box-sizing: border-box;
+      }
+
+      .responsive-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .buttons-section {
+        width: 100%;
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .button2 {
+        background-color: green;
+        color: #fff;
+      }
+
+      .button.button:hover {
+        background-color: darkblue;
+      }
+
+      .button.request-demo {
+        background-color: green;
+        color: #fff;
+      }
+
+      .button.request-demo:hover {
+        background-color: darkgreen;
+      }
+
+      .why-prosuit {
+        width: 100%;
+        background-color: #f8f8f8;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .why-prosuit h2 {
+        color: blue;
+        font-weight: bold;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        h2 {
+          font-size: 1.5em;
+        }
+
+        .line {
+          width: 30px;
+          margin-right: 5px;
+        }
+      }
+
+      .line {
+        border-left: 5px solid green;
+        height: 1em;
+        margin-right: 10px;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .box {
+        width: 30%;
+        float: left;
+        margin: 20px 1.5%;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        height: 500px;
+      }
+
+      .box img {
+        width: 60%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .box:hover {
+        transform: scale(1.05);
+      }
+
+      .box .content {
+        padding: 20px;
+        flex: 1;
+        box-sizing: border-box;
+      }
+
+      .box h2 {
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      .box p {
+        font-size: 1em;
+        color: #666;
+      }
+
+      .p {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      @media screen and (min-width: 768px) {
+        p {
+          font-size: 18px;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .box {
+          width: 100%;
+        }
+      }
+
+      .solutions-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        color: blue;
+      }
+
+      .solution-box {
+        width: 30%;
+        margin: 20px 1.5%;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+      }
+
+      .solution-box h3 {
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      .solution-box p {
+        font-size: 1em;
+        color: #666;
+      }
+
+      .solution-box .button {
+        text-align: left;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        display: block;
+        float: left;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .solution-box {
+          width: 100%;
+        }
+      }
+
+      .top-solutions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .bottom-solutions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      @media only screen and (max-width: 768px) {
+        .solution-box {
+          width: 100%;
+        }
+      }
+
+      .solution-box {
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .solution-box:hover {
+        transform: scale(1.05);
+      }
+
+      .solution-box:hover img {
+        transform: scale(1.1);
+      }
+
+      .solution-box .content {
+        text-align: left;
+      }
+
+      .solution-box h3 {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .solution-box p {
+        text-align: left;
+      }
+
+      .solution-box .button {
+        text-align: left;
+        margin-top: 10px;
+        display: block;
+        padding: 10px 15px;
+        font-size: 1em;
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        max-width: 150px;
+      }
+
+      .solution-box {
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+
+      .solution-box:last-child {
+        border-right: none;
+      }
+
+      .top-footer {
+        background-color: #84be35;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 36px;
+      }
+
+      .top-footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .top-footer-text {
+        flex: 1;
+        margin: 0 20px;
+        font-size: 36px;
+      }
+
+      .request-demo-button {
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+
+      button {
+        background-color: #2196f3;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #00796b;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .top-footer-text {
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        .request-demo-button {
+          margin-right: 0;
+        }
+      }
+
+      .footer {
+        background-color: #2196f3;
+        color: white;
+        padding: 30px 0;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-section {
+        flex: 1;
+        margin: 0 20px;
+      }
+
+      h4 {
+        color: white;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #00bcd4;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-social {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+      }
+
+      .social-icon {
+        margin-right: 40px;
+        font-size: 20px;
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .social-icon {
+          font-size: 16px;
+          margin-right: 10px;
+        }
+      }
+
+      .social-icon:hover {
+        color: #00bcd4;
+      }
+      .footer-policy-container {
+        text-align: right;
+      }
+
+      .footer-policy {
+        color: white;
+        text-align: center;
+        margin-right: 40px;
+      }
+
+      .footer-policy {
+        text-align: right;
+        color: white;
+        margin-right: 40px;
+      }
+
+      .footer-copy {
+        margin-right: 200px;
+        text-align: center;
+        color: #fff;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .footer-copy {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
     </style>
+    <title>ProSuit</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images\logo.png" href="" alt="Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="#HOME">HOME</a>
+        <a href="WhyProsuit.html">ABOUT</a>
+        <a href="#solutions">SOLUTIONS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <div class="action-buttons">
+        <button class="request-demo" onclick="requestDemo()">
+          REQUEST A DEMO
+        </button>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-section">
+        <h3 style="color: green">Welcome to ProSuit</h3>
+        <h1 style="color: #2196f3">
+          Discover <br />
+          the power of <br />Software
+        </h1>
+        <p>
+          Every day, our clients are faced with challenges and opportunities.<br />
+          We help them solve their problems by connecting them to <br />
+          information technology. We offer solutions that grow, <br />
+          empower and help businesses.
+        </p>
+        <div class="buttons-section">
+          <button class="button">GET STARTED</button>
+          <button class="button request-demo" onclick="requestDemo()">
+            REQUEST A DEMO
+          </button>
+        </div>
+      </div>
+
+      <div class="image-section">
+        <img
+          src="images\ProSuite-web-Icons 1.png"
+          alt="Responsive Image"
+          class="responsive-image"
+        />
+      </div>
+    </div>
+
+    <div class="why-prosuit">
+      <h1>
+        <span class="line"></span>
+        <span style="color: darkblue; font-weight: bold">Why</span>
+        <span style="color: #2196f3; font-weight: lighter">ProSuit?</span>
+      </h1>
+
+      <div class="box">
+        <img src="images\ProSuite-web-Icons 1.png" alt="Image 1" />
+        <div class="content">
+          <h2>
+            Comprehensive <br />
+            Management Suite
+          </h2>
+          <p>
+            ProSuite is a one-stop solution for enterprise<br />
+            operations, offering services from asset <br />
+            tracking to compliance management.
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images\ProSuite-web-Icons 1.png" alt="Image 2" />
+        <div class="content">
+          <h2>
+            User-Friendly <br />
+            Design
+          </h2>
+          <p>
+            With its emphasis on user experience and <br />easy-to-use tools,
+            ProSuite transforms <br />complex tasks into simple operations.
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images\ProSuite-web-Icons 1.png" alt="Image 3" />
+        <div class="content">
+          <h2>Cloud-Based <br />Solution</h2>
+          <p>
+            As a flexible, cloud-based suite, ProSuite<br />
+            ensures business continuity and scalability,<br />
+            allowing businesses to manage their <br />
+            operations anytime, anywhere.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="solutions-page">
+      <h1 class="solutions-heading">
+        <span class="line"></span>
+        <span style="color: darkblue; font-weight: bold">Our</span>
+        <span style="color: #2196f3; font-weight: lighter">Solutions</span>
+      </h1>
+
+      <div class="top-solutions">
+        <div class="solution-box">
+          <h3>Asset Management</h3>
+          <p>
+            Gain control of your asset with Software that<br />
+            helps you keep track of your physical assets.
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+
+        <div class="solution-box">
+          <h3>Risk Management</h3>
+          <p>
+            Identify, capture and monitor enterprise risks <br />
+            with ease.
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+
+        <div class="solution-box">
+          <h3>Documents Management</h3>
+          <p>
+            Easy-to-use solution that enables your firm to<br />
+            convert paper into electronic files.
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+      </div>
+
+      <div class="bottom-solutions">
+        <div class="solution-box">
+          <h3>Perfomance Management</h3>
+          <p>
+            Achieve business stragetic goals with a solution<br />
+            ensuring organizations are running effenciently
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+
+        <div class="solution-box">
+          <h3>Audit</h3>
+          <p>
+            Streamline your audit processes and comply with<br />
+            regulations or internal policies.
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+
+        <div class="solution-box">
+          <h3>Compliance Management</h3>
+          <p>
+            Manage and meet legal requirements and comply<br />
+            with applicable laws and regulations.
+          </p>
+          <button class="button">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-footer">
+      <div class="top-footer-container">
+        <div class="top-footer-text">
+          <p>We'd love to show you how our solution works</p>
+        </div>
+        <div class="request-demo-button">
+          <button onclick="requestDemo()">REQUEST A DEMO</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <a href="#" class="footer-logo">
+            <img src="images\image 3.png" alt="Logo" />
+          </a>
+          <p>
+            ProSuite is a suite of cloud-based platforms which aims at
+            transforming and automating enterprise tasks. Our solutions focus on
+            user experience and easy-to-use tools including Asset Management,
+            Risk Management, and Performance Management.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">ProSuite Risk</a></li>
+            <li><a href="#">ProSuite Docs</a></li>
+            <li><a href="#">ProSuite Asset</a></li>
+            <li><a href="#">ProSuite Performance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about.html">About</a></li>
+            <li><a href="#Solutions">Solutions</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#RequestDemo">Request a Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia
+            morbi praesent nulla tempor sagittis. Curabitur donec cursus donec
+            risrdum nullam orci sit dictum. Molestie nunc sed amet vulputate in.
+            Condimentum mi massa id interdum risus, tortor nunc mauris.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          <p>2024 (c) ProSuite. All rights reserved.</p>
+        </div>
+
+        <div class="footer-policy">
+          <a href="#" style="color: white">Privacy Policy</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://twitter.com" class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com" class="social-icon"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com" class="social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
     <script>
       function toggleMenu() {
         const navLinks = document.querySelector(".nav-links");
@@ -112,29 +815,5 @@
         alert("Demo requested!");
       }
     </script>
-    <title>ProSuit</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="logo">
-        <img src="images\logo.png" alt="Logo" />
-      </div>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="action-buttons">
-        <button class="request-demo" onclick="requestDemo()">
-          Request Demo
-        </button>
-      </div>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
   </body>
 </html>
